@@ -25,6 +25,12 @@ public class OrderData {
         this.companyName = companyName;
 
     }
+OrderData (int orderId, String customerId) {
+        this.orderId    = orderId;
+        this.customerId   = customerId;
+     
+
+    }
     public static Vector<OrderData> getOrderList(Connection connection) {
         Vector<OrderData> vec = new Vector<OrderData>();
         String sql = "Select OrderId, CustomerId, OrderDate FROM Orders";
